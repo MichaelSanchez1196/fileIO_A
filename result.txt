@@ -9,4 +9,7 @@
 9 Words of length 9
 6 Words of length 10
 3 Words of length 11 or more
+
 Average characters per word: 4
+Total number of words: 278
+

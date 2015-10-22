@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
+#include <string>
 using namespace std;
 
 int main()
@@ -12,6 +13,7 @@ int main()
 	ifstream fin;
 	ofstream fout;
 	ofstream foutB;
+	ofstream foutC;
 	string  word;
 	int count = 0, chars = 0;
 	int count1 = 0, count2 = 0, count3 = 0, count4 = 0, count5 = 0, count6 = 0, count7 = 0, count8 = 0, count9 = 0, count10 = 0, countMore = 0;
@@ -46,7 +48,13 @@ int main()
 			chars++;
 		}
 		count ++;
-
+		
+		char letter;
+		letter = word[0];
+		letter = toupper(letter);
+		word = word.substr(1,word.length());
+		word = letter + word;
+		foutC << word << " ";
 	
 		switch (length)
 		{
@@ -84,7 +92,7 @@ int main()
 		}
 	}
 
-	fout << count1 << "\n Words of length 1\n";
+	fout << count1 << " Words of length 1\n";
 	fout << count2 << " Words of length 2\n";
 	fout << count3 << " Words of length 3\n";
 	fout << count4 << " Words of length 4\n";
@@ -96,7 +104,7 @@ int main()
 	fout << count10 << " Words of length 10\n";
 	fout << countMore << " Words of length 11 or more\n\n";
 	fout << "Average characters per word: " << chars/count << endl;
-	fout << "Total number of words: " << count << endl;
+	fout << "Total number of words: " << count << endl << endl;
 
 	fin.close();
 	fout.close();
