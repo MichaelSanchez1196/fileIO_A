@@ -14,7 +14,7 @@ int main()
 	ofstream fout;
 	ofstream foutB;
 	ofstream foutC;
-	string  word;
+	string  word, allCaps;
 	int count = 0, chars = 0;
 	int count1 = 0, count2 = 0, count3 = 0, count4 = 0, count5 = 0, count6 = 0, count7 = 0, count8 = 0, count9 = 0, count10 = 0, countMore = 0;
 
@@ -55,7 +55,17 @@ int main()
 		word = word.substr(1,word.length());
 		word = letter + word;
 		foutC << word << " ";
+			
 	
+		for(int i = 0; i < word.length(); i++)
+		{
+		 string allCaps;
+		 char letter;
+		 letter = toupper(word[i]);
+		 allCaps += letter;
+		 foutB << allCaps ;
+		}			
+
 		switch (length)
 		{
 			case 1:count1++;
@@ -106,6 +116,8 @@ int main()
 	fout << "Average characters per word: " << chars/count << endl;
 	fout << "Total number of words: " << count << endl << endl;
 
+		
+	
 	fin.close();
 	fout.close();
 	foutB.close();
