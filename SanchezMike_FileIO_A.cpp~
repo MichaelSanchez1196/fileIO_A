@@ -64,7 +64,8 @@ int main()
 		 letter = toupper(word[i]);
 		 allCaps += letter;
 		 foutB << allCaps ;
-		}			
+		}	
+		 fout << " ";		
 
 		switch (length)
 		{
