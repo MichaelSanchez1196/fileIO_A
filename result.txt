@@ -1,0 +1,12 @@
+7 Words of length 1
+56 Words of length 2
+56 Words of length 3
+56 Words of length 4
+37 Words of length 5
+18 Words of length 6
+23 Words of length 7
+7 Words of length 8
+9 Words of length 9
+6 Words of length 10
+3 Words of length 11 or more
+Average characters per word: 4
